@@ -1,0 +1,10 @@
+This is a basic LaTeX Beamer template with Wikimedia branding and colors.
+
+You're gonna need at least the following packages:
+
+    apt install texlive-plain-generic texlive-latex-extra texlive-xetex
+
+
+Make a PDF out of slides.tex with the following command:
+
+    xelatex slides.tex

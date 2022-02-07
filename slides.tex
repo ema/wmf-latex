@@ -1,0 +1,58 @@
+\documentclass[14pt]{beamer}
+
+\usepackage{wmf-slides}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+
+\usepackage{fontspec}
+%\setsansfont{Ubuntu}
+\usepackage{listings}
+\usepackage{varwidth}
+
+\newlength\someheight
+\setlength\someheight{3cm}
+
+\newcommand\vsh{\vspace{.5em}}
+\def\good{\includegraphics[width=1.05em]{good}}
+\def\bad{\includegraphics[width=1.05em]{bad}}
+
+\title{Traffic Switchover 2018 vs 2020}
+\subtitle{From Varnish to ATS}
+\author{Emanuele Rocca}
+\institute{Wikimedia Foundation}
+\date{September 21st 2020}
+
+\begin{document}
+
+\mktitle
+\setcounter{framenumber}{0}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{framextopmargin=50pt,frame=bottomline}
+
+%\section{Introduction}
+
+\begin{frame}{}
+\begin{center}
+\Large{How we spent 1 year to save 2 minutes}
+\end{center}
+\end{frame}
+
+\begin{frame}{Outline}
+%  \tableofcontents
+  \begin{itemize}
+  \item Old CDN Architecture with Varnish
+  \item New CDN Architecture with ATS
+  \item Traffic Switchover 2018
+  \item Traffic Switchover 2020
+  \end{itemize}
+\end{frame}
+
+%{
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth]{pics/confusion}}
+%\begin{frame}[plain]
+%\end{frame}
+%}
+
+\end{document}

@@ -1,0 +1,248 @@
+\ProvidesPackage{wmf-slides}[31/5/2016 Emanuele Rocca]
+
+
+%\usepackage[T1]{fontenc} 
+%\usepackage[utf8]{inputenc}
+
+% \usepackage{pgfpages}
+% \usepackage{beamerthemesplit}
+% %\usetheme[secheader]{Boadilla}
+% \usetheme{Boadilla}
+% \useoutertheme{shadow}
+
+%\logo{\includegraphics[width=6cm]{logo/contrail-logo}}
+\institute{~}
+
+\newcommand\mktitle{
+  \begin{frame}{}
+    \begin{center}
+      %\includegraphics[width=3.5cm]{logo/foundation-logo}
+      \includegraphics[width=3.5cm]{logo/wikiglobe}
+      
+      \vspace{1em}
+      {\LARGE\alert{\inserttitle}}
+
+      {\alert{\insertsubtitle}}
+
+
+      \vspace{1em}
+      {\large\insertauthor}
+
+      \insertinstitute
+
+      \vspace{1em}
+      \insertdate
+      
+
+      %\vspace{3em}
+      %\includegraphics[width=1cm]{logo/eu-logo}
+
+      %{\tiny contrail is co-funded by the EC\\ 7th Framework
+      %  Programme\\ under Grant Agreement nr.\\ 257438\\}
+
+    \end{center}
+  \end{frame}
+}
+
+\newcommand\lastslide{
+  \begin{frame}{}
+    \begin{minipage}{0.35\linewidth}
+      ~
+    \end{minipage}
+    \begin{minipage}{0.55\linewidth}
+      \vspace{1em}
+      \includegraphics[width=3.5cm]{logo/contrail-logo}         
+      
+      \vspace{1em}
+      \includegraphics[width=1.5cm]{logo/eu-logo}
+      \hspace{3mm}
+      \includegraphics[width=1.5cm]{logo/fp7}         
+      
+      {\footnotesize \textbf{contrail} is co-funded by the\\[-0.5em]
+        EC 7th Framework Programme}
+      
+      \vspace{1.5em}
+      {\scriptsize Funded under: FP7 (Seventh Framework Programme)\\[-0.5em]
+        Area: Internet of Services, Software \& Virtualization\\[-0.5em] (ICT-2009.1.2)\\[-0.5em]
+        Project reference: FP7-IST-257438\\[-0.5em]
+        Total cost: 11.29 million euro\\[-0.5em]
+        EU contribution: 8.3 million euro\\[-0.5em]
+        Execution: From 2010-10-01 till 2013-09-30\\[-0.5em]
+        Duration: 36 months\\[-0.5em]
+        Contract type: Collaborative project (generic)}
+    \end{minipage}
+  \end{frame}
+}
+
+\usepackage{ulem} \normalem
+\usepackage{pifont}
+\def\fffleche{$\Rrightarrow$} %% Triple fleche
+\def\ffleche{$\Rightarrow$}   %% Double fleche
+\def\fleche{$\rightarrow$}    %% Simple fleche
+\def\plus{$\oplus$}           %% Plus
+\def\moins{$\ominus$}         %% Moins
+\def\doigt{\ding{43}}         %% Doigt accusateur ;-)
+\def\environ{$\sim$}          %% Environ
+\def\checked{$\surd$}         %% Checked 
+\def\vs{\vspace{1em}}
+\def\vsn{\vspace{-1em}}
+
+\newcommand{\sorfig}[2]{
+  \begin{figure}\begin{center}
+      \mbox{\leavevmode
+        \includegraphics[width=#2\hsize]{#1}
+%        \ifpdf
+%        \pdfimage width #2\linewidth {#1.pdf}
+%        \else
+%        \epsfig{file=#1.eps,width=#2\hsize}
+%        \fi
+      }
+  \end{center}\end{figure}}
+
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment%
+  {code}%
+  {Verbatim}%
+  {frame=single,framesep=1mm,fontsize=\scriptsize\rm\color{black},resetmargins=true}
+\DefineVerbatimEnvironment%
+  {code2}%
+  {Verbatim}%
+  {frame=single,framesep=1mm,fontsize=\scriptsize\rm\color{black},resetmargins=true,commandchars=\\\[\]}
+\DefineVerbatimEnvironment%
+  {code3}%
+  {Verbatim}%
+  {frame=single,framesep=1mm,fontsize=\scriptsize\rm\color{black},resetmargins=true,commandchars=\\\@\#}
+\DefineVerbatimEnvironment%
+  {code4}%
+  {Verbatim}%
+  {frame=single,framesep=1mm,fontsize=\scriptsize\rm\color{black},resetmargins=true,commandchars=\~\@\#}
+
+\newcommand{\n}{$\backslash$n}
+
+%%%%%% Option nosecslides %%%%%%%
+% \ifthenelse{\boolean{nosecslides}}{
+%   \AtBeginSection[]{
+%   }
+% }{
+%   \AtBeginSection[]{
+%     \begin{frame}
+%       \frametitle{Table of Contents}
+%       \tableofcontents[currentsection]
+%     \end{frame}
+%   }
+% }
+
+%%%%%% Option handout %%%%%%%%
+% \ifthenelse{\boolean{handout}}{
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm, landscape]
+% \setbeamercolor{background canvas}{bg=black!5}
+% \setbeamerfont{alerted text}{series=\bfseries} %scshape}
+% %\setbeamerfont{alerted text}{shape=\itshape}
+% \setbeamercolor{alerted text}{fg=black}
+% \setbeamercolor{section in toc}{fg=black}
+% \setbeamercolor{title}{fg=black}
+% \renewcommand{\beamer@@pause}[1][]{}% 
+% %\def\beamer@@pause{}%
+% \def\pause{}%
+% }{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\useoutertheme{infolines-contrail}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[triangle]
+
+\mode<presentation>
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{logo/WMFBackLight.pdf}}
+
+\defbeamertemplate*{footline}{infolines-vu theme}
+{
+  \leavevmode%
+  \hbox{%
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+%     \hspace*{2em}\usebeamerfont{section in head/foot}\insertshorttitle\hspace*{2em}\insertsubtitle
+%   \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.54\paperwidth,ht=3ex,dp=3ex,right]{footer}%
+    \insertframenumber{} \hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\defbeamertemplate*{headline}{infolines-contrail theme}
+{}
+%   \leavevmode%
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+%     \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}
+%   \end{beamercolorbox}%
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+%     \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+%   \end{beamercolorbox}}%
+%   \vskip0pt%
+% }
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
+
+
+\definecolor{contrailbackground}{rgb}{0.882,0.882,0.882}
+%\definecolor{contrailhighlight}{rgb}{0.882,0.443,0.153}
+\definecolor{contrailhighlight}{rgb}{0.0,0.4,0.6}
+\definecolor{contrailfooter}{rgb}{0.267,0.620,0.380}
+
+
+\setbeamercolor*{normal text}{fg=black,bg=contrailbackground}
+\setbeamercolor*{structure}{fg=contrailhighlight}
+\setbeamercolor*{footer}{fg=contrailfooter}
+\setbeamercolor*{alerted text}{fg=contrailhighlight}
+
+\@ifundefined{beamer@cta@do}{}{\beamer@cta@do}
+
+\mode<presentation>
+
+
+
+
+
+% \setbeamercolor*{example text}{fg=green!65!black}
+
+% \setbeamercolor*{structure}{fg=blue!25!white}
+
+% \setbeamercolor{palette primary}{use={structure,normal text},fg=structure.fg,bg=normal text.bg!75!black}
+% \setbeamercolor{palette secondary}{use={structure,normal text},fg=structure.fg,bg=normal text.bg!60!black}
+% \setbeamercolor{palette tertiary}{use={structure,normal text},fg=structure.fg,bg=normal text.bg!45!black}
+% \setbeamercolor{palette quaternary}{use={structure,normal text},fg=structure.fg,bg=normal text.bg!30!black}
+
+% \setbeamercolor*{block body}{bg=normal text.bg!90!black}
+% \setbeamercolor*{block body alerted}{bg=normal text.bg!90!black}
+% \setbeamercolor*{block body example}{bg=normal text.bg!90!black}
+% \setbeamercolor*{block title}{parent=structure,bg=normal text.bg!75!black}
+% \setbeamercolor*{block title alerted}{use={normal text,alerted text},fg=alerted text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+% \setbeamercolor*{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=normal text.bg!75!black}
+
+% \setbeamercolor{item projected}{fg=black}
+
+% \setbeamercolor*{sidebar}{parent=palette primary}
+
+% \setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+% \setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+% \setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+% \setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+
+% \setbeamercolor*{separation line}{}
+% \setbeamercolor*{fine separation line}{}
+
+
+\mode
+<all>
